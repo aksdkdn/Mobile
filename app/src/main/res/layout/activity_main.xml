@@ -1,92 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <!-- 건강나침반 UI -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="20dp"
+        android:text="건강나침반"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000000">
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="5dp"
+        android:background="#4CAF50"
+        android:text="만보기"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="40dp"
-            android:layout_height="47dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="9dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/leftarrow" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:background="#2196F3"
+        android:text="운동 기록하러가기"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/imageViewHome"
-            android:layout_width="40dp"
-            android:layout_height="47dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="9dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/home" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="60dp"
+        android:background="#000000" />
 
-        <TextView
-            android:id="@+id/txtTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:text="운동 추천 루틴"
-            android:textColor="#FFFFFF"
-            android:textSize="35sp" />
+    <TextView
+        android:id="@+id/quoteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:text="오늘의 명언이 여기에 표시됩니다." />
 
-        <!-- 디자인 개선된 버튼 항목 -->
-        <Button
-            android:id="@+id/btnBicepsRoutine"
-            style="@style/RoutineButtonStyle"
-            android:text="이두 운동 루틴"
-            android:layout_below="@id/txtTitle"
-            android:layout_centerHorizontal="true"/>
 
-        <Button
-            android:id="@+id/btnShoulderRoutine"
-            style="@style/RoutineButtonStyle"
-            android:text="어깨 운동 루틴"
-            android:layout_below="@id/btnBicepsRoutine"
-            android:layout_centerHorizontal="true"/>
 
-        <Button
-            android:id="@+id/btnTricepsRoutine"
-            style="@style/RoutineButtonStyle"
-            android:text="삼두 운동 루틴"
-            android:layout_below="@id/btnShoulderRoutine"
-            android:layout_centerHorizontal="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/quoteTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="120dp"
+        android:background="#000000" />
 
-        <Button
-            android:id="@+id/btnLegRoutine"
-            style="@style/RoutineButtonStyle"
-            android:text="하체 운동 루틴"
-            android:layout_below="@id/btnTricepsRoutine"
-            android:layout_centerHorizontal="true"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btnChestRoutine"
-            style="@style/RoutineButtonStyle"
-            android:text="가슴 운동 루틴"
-            android:layout_below="@id/btnLegRoutine"
-            android:layout_centerHorizontal="true"/>
 
-        <Button
-            android:id="@+id/btnBackRoutine"
-            style="@style/RoutineButtonStyle"
-            android:text="등 운동 루틴"
-            android:layout_below="@id/btnChestRoutine"
-            android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-</ScrollView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="60dp"
+        android:background="#000000" />
+
+
+
+    <TextView
+        android:id="@+id/weatherTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:text="현재 날씨: 맑음"
+        android:layout_below="@+id/view"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp" />
+
+
+</RelativeLayout>
