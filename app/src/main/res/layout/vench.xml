@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
-        tools:context=".EduchoboActivity">
+        tools:context=".DeadActivity">
 
         <!-- 빈 박스 -->
 
@@ -85,7 +85,7 @@
             android:layout_below="@id/buttonContainer"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
-            android:text="케이블 바이셉스 컬"
+            android:text="벤치프레스"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
@@ -99,7 +99,7 @@
             android:layout_marginRight="16dp"
             android:padding="4dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/cable1" />
+            android:src="@drawable/vench1" />
 
         <!-- 타이머를 표시할 텍스트뷰 -->
         <TextView
@@ -131,6 +131,12 @@
             android:id="@+id/set3TextView"
             android:layout_below="@id/set2TextView"
             android:text="3세트" />
+
+        <TextView
+            style="@style/HealthSetViewStyle"
+            android:id="@+id/set4TextView"
+            android:layout_below="@id/set3TextView"
+            android:text="4세트" />
 
     </RelativeLayout>
 </ScrollView>

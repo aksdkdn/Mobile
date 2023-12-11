@@ -20,8 +20,57 @@
             </intent-filter>
         </activity>
         <activity android:name=".NanidoActivity" />
-        <activity android:name=".EduchoboActivity" />
-        <activity android:name=".CableBicepCurlChoboActivity" />
+        <activity android:name=".NanidoActivity2" />
+        <activity android:name=".NanidoActivity3" />
+        <activity android:name=".NanidoActivity4" />
+        <activity android:name=".NanidoActivity5" />
+        <activity android:name=".NanidoActivity6" />
+
+        <activity android:name=".Count1Activity" />
+        <activity android:name=".Count2Activity" />
+        <activity android:name=".Count3Activity" />
+        <activity android:name=".Count4Activity" />
+        <activity android:name=".Count5Activity" />
+        <activity android:name=".Count6Activity" />
+
+        <activity android:name=".VavelCulActivity" />
+        <activity android:name=".VavelCulExActivity" />
+        <activity android:name=".CableBicepCurlActivity" />
+        <activity android:name=".SeatedActivity" />
+        <activity android:name=".ConcentActivity" />
+        <activity android:name=".PreacherActivity" />
+        <activity android:name=".HammerActivity" />
+
+        <activity android:name=".DumbelShoulderActivity" />
+        <activity android:name=".VentOverActivity" />
+        <activity android:name=".SideReizeActivity" />
+        <activity android:name=".FrontReizeActivity" />
+        <activity android:name=".CableReizeActivity" />
+        <activity android:name=".OverHeadActivity" />
+
+        <activity android:name=".KickBackActivity" />
+        <activity android:name=".OverHeadDumbelActivity" />
+        <activity android:name=".DipsActivity" />
+        <activity android:name=".TricepsActivity" />
+
+        <activity android:name=".SqertActivity" />
+        <activity android:name=".DeadActivity" />
+        <activity android:name=".LegCurlActivity" />
+        <activity android:name=".DumbelRengeActivity" />
+        <activity android:name=".VavelRengeActivity" />
+
+        <activity android:name=".VenchActivity" />
+        <activity android:name=".InclineActivity" />
+        <activity android:name=".DumbelFlyActivity" />
+        <activity android:name=".PackDeckActivity" />
+        <activity android:name=".DumbelPressActivity" />
+
+        <activity android:name=".PullUpActivity" />
+        <activity android:name=".RatPullActivity" />
+        <activity android:name=".VavelRowActivity" />
+        <activity android:name=".TivaRowActivity" />
+        <activity android:name=".DumbelRowActivity" />
+
     </application>
 
-</manifest>
+    </manifest>

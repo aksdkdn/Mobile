@@ -1,0 +1,141 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".VavelCulActivity">
+
+        <!-- 빈 박스 -->
+
+        <!-- 박스 안에 수평으로 배치된 버튼들 -->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="29dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/leftarrow" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:paddingLeft="15dp"
+            android:text="운동"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/emptyBox"
+            style="@style/EmptyBoxStyle"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/emptybox_border" />
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emptyBox"
+            android:layout_marginTop="-50dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:text="운동 가이드"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/babelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonContainer"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:text="바벨컬"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/babelImage"
+            android:layout_width="315dp"
+            android:layout_height="278dp"
+            android:layout_below="@id/babelText"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vavelcul1" />
+
+        <!-- 두 번째 단락 -->
+        <LinearLayout
+            android:id="@+id/descriptionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/babelImage"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <!-- 준비 동작 -->
+            <TextView
+                android:id="@+id/readyActionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="준비 동작"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/readyActionDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1. 바벨을 양손으로 잡고 어깨 너비만큼 발을 벌립니다.\n\n2. 손목은 몸 쪽으로 향하도록 바벨을 잡아줍니다."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <!-- 운동 수행 -->
+            <TextView
+                android:id="@+id/exerciseActionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="운동 수행"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/exerciseActionDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1. 일어서서 바벨을 손에 쥐고, 팔을 편안한 자연스러운 자세로 펴줍니다.\n\n2. 팔꿈치를 움켜잡고 바벨을 몸 쪽으로 끌어올립니다. 이때, 상완삼두근이 수축하도록 합니다.\n\n3. 바벨을 가슴 부분까지 올린 후, 상완을 최대한 굽히지 않고 팔을 다시 펴줍니다.이 동작을 반복합니다."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

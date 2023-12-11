@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
-        tools:context=".EduchoboActivity">
+        tools:context=".PreacherActivity">
 
         <!-- 빈 박스 -->
 
@@ -85,10 +85,11 @@
             android:layout_below="@id/buttonContainer"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="30dp"
-            android:text="바벨컬"
+            android:text="프리쳐컬"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
+        <!-- 타이머를 표시할 텍스트뷰 -->
         <ImageView
             android:id="@+id/babelImage"
             android:layout_width="315dp"
@@ -99,9 +100,8 @@
             android:layout_marginRight="16dp"
             android:padding="4dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/vavelcul1" />
+            android:src="@drawable/preacher1" />
 
-        <!-- 타이머를 표시할 텍스트뷰 -->
         <TextView
             android:id="@+id/timerTextView"
             android:layout_width="wrap_content"
@@ -131,6 +131,13 @@
             android:id="@+id/set3TextView"
             android:layout_below="@id/set2TextView"
             android:text="3세트" />
+
+        <TextView
+            style="@style/HealthSetViewStyle"
+            android:id="@+id/set4TextView"
+            android:layout_below="@id/set3TextView"
+            android:text="4세트" />
+
 
     </RelativeLayout>
 </ScrollView>

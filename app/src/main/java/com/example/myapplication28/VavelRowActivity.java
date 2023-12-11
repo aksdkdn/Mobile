@@ -10,23 +10,24 @@ import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class EduchoboActivity extends AppCompatActivity {
+public class VavelRowActivity extends AppCompatActivity {
 
     private TextView timerTextView;
     private TextView set1TextView;
     private TextView set2TextView;
     private TextView set3TextView;
+    private TextView set4TextView;
     private ImageView babelImage;
     private Handler handler;
     private int currentSet = 1;
     private int currentRepetition = 0;
-    private final int totalSets = 3;
-    private final int totalRepetitions = 12;
+    private final int totalSets = 4;
+    private final int totalRepetitions = 3;
     private final long setRestTimeMillis = 1 * 1000; // 1분 휴식
     private final long initialCountdownMillis = 1 * 1000; // 초기 카운트다운 시간
     private final long exerciseTimeMillis = 1 * 1000; // 1세트당 운동 시간
 
-    private int[] imageResources = {R.drawable.vavelcul1, R.drawable.vavelcul2};
+    private int[] imageResources = {R.drawable.vavelrow1, R.drawable.vavelrow2};
     private int currentImageIndex = 0;
 
     private static final long layoutChangeDelayMillis = 5 * 1000; // 5초
@@ -38,19 +39,23 @@ public class EduchoboActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.educhobo);
+        setContentView(R.layout.vavelrow);
         set1TextView = findViewById(R.id.set1TextView);
         set2TextView = findViewById(R.id.set2TextView);
         set3TextView = findViewById(R.id.set3TextView);
+        set4TextView = findViewById(R.id.set4TextView);
         timerTextView = findViewById(R.id.timerTextView);
         babelImage = findViewById(R.id.babelImage);
         handler = new Handler();
 
+        // Count1Activity에서 전달된 반복 횟수 받아오기
+        int totalRepetitions = getIntent().getIntExtra("totalRepeat", 8);
+
         // 초기 카운트다운 시작
-        startInitialCountdown(initialCountdownMillis);
+        startInitialCountdown(initialCountdownMillis, totalRepetitions);
     }
 
-    private void startInitialCountdown(long millisUntilFinished) {
+    private void startInitialCountdown(long millisUntilFinished, final int totalRepetitions) {
         // CountDownTimer를 사용하여 초기 카운트다운을 표시
         new CountDownTimer(millisUntilFinished, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -60,13 +65,13 @@ public class EduchoboActivity extends AppCompatActivity {
             public void onFinish() {
                 // 초기 카운트다운이 끝나면 운동을 시작
                 timerTextView.setText("운동 시작!");
-                startSetTimer(0);
+                startSetTimer(0, totalRepetitions);
                 startImageChangeTimer();
             }
         }.start();
     }
 
-    private void startSetTimer(final int seconds) {
+    private void startSetTimer(final int seconds, final int totalRepetitions) {
         // CountDownTimer를 사용하여 남은 시간을 표시
         new CountDownTimer(seconds * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -82,12 +87,15 @@ public class EduchoboActivity extends AppCompatActivity {
                 } else if (currentSet == 3) {
                     set3TextView.setBackgroundResource(R.drawable.healthsetview_border2);
                 }
+                else if (currentSet == 4) {
+                    set4TextView.setBackgroundResource(R.drawable.healthsetview_border2);
+                }
                 // 타이머가 종료되면 세트와 반복 횟수를 증가
                 currentRepetition++;
 
                 if (currentRepetition <= totalRepetitions) {
                     // 반복 횟수가 완료되지 않았으면 다음 반복 시작
-                    startSetTimer((int) (exerciseTimeMillis / 1000));
+                    startSetTimer((int) (exerciseTimeMillis / 1000), totalRepetitions);
                 } else {
                     // 반복 횟수가 완료되면
                     currentRepetition = 0;  // 반복 횟수 초기화
@@ -100,7 +108,7 @@ public class EduchoboActivity extends AppCompatActivity {
                             public void run() {
                                 timerTextView.setText("휴식 중");
                                 currentSet++;
-                                startSetTimer(0);  // 휴식이 끝나면 다음 세트 시작
+                                startSetTimer(0, totalRepetitions);  // 휴식이 끝나면 다음 세트 시작
                             }
                         }, setRestTimeMillis);
                     } else {
@@ -111,7 +119,7 @@ public class EduchoboActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 // 여기에서 새로운 레이아웃으로 전환하는 코드를 추가
-                                startActivity(new Intent(EduchoboActivity.this, CableBicepCurlChoboActivity.class));
+                                startActivity(new Intent(VavelRowActivity.this, TivaRowActivity.class));
                                 finish(); // 현재 액티비티 종료
                             }
                         }, layoutChangeDelayMillis);

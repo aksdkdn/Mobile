@@ -7,12 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NanidoActivity extends AppCompatActivity {
+public class NanidoActivity5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nanido);
+        setContentView(R.layout.nanido2);
 
         Button btnBeginner = findViewById(R.id.btnBeginner);
         Button btnIntermediate = findViewById(R.id.btnIntermediate);
@@ -46,7 +46,7 @@ public class NanidoActivity extends AppCompatActivity {
                 repeat = 8; // 기본값으로 초급자 설정
         }
 
-        Intent intent = new Intent(NanidoActivity.this, Count1Activity.class);
+        Intent intent = new Intent(NanidoActivity5.this, Count5Activity.class);
         intent.putExtra("difficulty", difficulty);
         intent.putExtra("totalRepeat", repeat);
         startActivity(intent);

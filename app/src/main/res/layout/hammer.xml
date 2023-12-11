@@ -1,0 +1,143 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        tools:context=".HammerCurlActivity">
+
+        <!-- 빈 박스 -->
+
+        <!-- 박스 안에 수평으로 배치된 버튼들 -->
+
+        <ImageView
+            android:id="@+id/imageViewHome"
+            android:layout_width="29dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:paddingLeft="15dp"
+            android:text="운동"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <View
+            android:id="@+id/emptyBox"
+            style="@style/EmptyBoxStyle"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/emptybox_border" />
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emptyBox"
+            android:layout_marginTop="-50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:text="지난 운동 기록"
+                android:textColor="#868e96" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:text="루틴 넘어가기"
+                android:textColor="#868e96" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:text="운동 가이드"
+                android:textColor="#868e96" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/babelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonContainer"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:text="해머컬"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- 타이머를 표시할 텍스트뷰 -->
+        <ImageView
+            android:id="@+id/babelImage"
+            android:layout_width="315dp"
+            android:layout_height="278dp"
+            android:layout_below="@id/babelText"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hammer1" />
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/babelImage"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <!-- 운동 세트를 표시할 텍스트뷰 -->
+        <TextView
+            style="@style/HealthSetViewStyle"
+            android:id="@+id/set1TextView"
+            android:layout_below="@id/timerTextView"
+            android:text="1세트" />
+
+        <TextView
+            style="@style/HealthSetViewStyle"
+            android:id="@+id/set2TextView"
+            android:layout_below="@id/set1TextView"
+            android:text="2세트" />
+
+        <TextView
+            style="@style/HealthSetViewStyle"
+            android:id="@+id/set3TextView"
+            android:layout_below="@id/set2TextView"
+            android:text="3세트" />
+
+        <TextView
+            style="@style/HealthSetViewStyle"
+            android:id="@+id/set4TextView"
+            android:layout_below="@id/set3TextView"
+            android:text="4세트" />
+
+
+    </RelativeLayout>
+</ScrollView>

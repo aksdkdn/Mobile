@@ -14,17 +14,64 @@ public class HealthRoutineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.healthroutine);
 
-        // 이두 운동 루틴 버튼
+        // 각 루틴 버튼에 대한 클릭 이벤트 처리
         Button btnBicepsRoutine = findViewById(R.id.btnBicepsRoutine);
         btnBicepsRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // NanidoActivity로 전환
-                Intent intent = new Intent(HealthRoutineActivity.this, NanidoActivity.class);
-                startActivity(intent);
+                // 이두 운동 루틴으로 전환
+                startRoutineActivity(NanidoActivity.class);
             }
         });
 
-        // 나머지 루틴 버튼들에 대해서도 위와 같은 방식으로 클릭 이벤트를 추가할 수 있습니다.
+        Button btnShoulderRoutine = findViewById(R.id.btnShoulderRoutine);
+        btnShoulderRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 어깨 운동 루틴으로 전환
+                startRoutineActivity(NanidoActivity2.class);
+            }
+        });
+
+        Button btnTricepsRoutine = findViewById(R.id.btnTricepsRoutine);
+        btnTricepsRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 삼두 운동 루틴으로 전환
+                startRoutineActivity(NanidoActivity3.class);
+            }
+        });
+
+        Button btnLegRoutine = findViewById(R.id.btnLegRoutine);
+        btnLegRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 하체 운동 루틴으로 전환
+                startRoutineActivity(NanidoActivity4.class);
+            }
+        });
+
+        Button btnChestRoutine = findViewById(R.id.btnChestRoutine);
+        btnChestRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 가슴 운동 루틴으로 전환
+                startRoutineActivity(NanidoActivity5.class);
+            }
+        });
+
+        Button btnBackRoutine = findViewById(R.id.btnBackRoutine);
+        btnBackRoutine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 등 운동 루틴으로 전환
+                startRoutineActivity(NanidoActivity6.class);
+            }
+        });
+    }
+
+    private void startRoutineActivity(Class<?> routineActivityClass) {
+        Intent intent = new Intent(HealthRoutineActivity.this, routineActivityClass);
+        startActivity(intent);
     }
 }

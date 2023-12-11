@@ -1,0 +1,91 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".NanidoActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/leftarrow" />
+
+    <ImageView
+        android:id="@+id/imageViewHome"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/home" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="운동 추천 루틴"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="29dp"
+        android:gravity="center"
+        android:text="환영합니다."
+        android:textColor="#0EFCFE"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtSelectDifficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtWelcome"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="원하시는 루틴의 난이도를 선택해주세요."
+        android:textColor="#0EFCFE"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnBeginner"
+        style="@style/NanidoButtonStyle"
+        android:layout_below="@id/txtSelectDifficulty"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="22dp"
+        android:text="초급자" />
+
+    <Button
+        android:id="@+id/btnIntermediate"
+        style="@style/NanidoButtonStyle"
+        android:layout_below="@id/btnBeginner"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:text="중급자" />
+
+    <Button
+        android:id="@+id/btnAdvanced"
+        style="@style/NanidoButtonStyle"
+        android:layout_below="@id/btnIntermediate"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:text="상급자" />
+
+</RelativeLayout>
